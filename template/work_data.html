@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% block title %}Lyudmil_work_info{% endblock %}
+
+{% block content %}
+
+<body onload="init()">
+<table>
+    <tr>
+        <td>
+
+            <div id="addform">
+             <div>
+                <label for="workPlace">Work Place</label>
+                <input id="workplace" name="workplace" type="text">
+            </div>
+            <div>
+                <label for="daTe">Start work date</label><br>
+                <input id="date" name="date" type="date">
+            </div>
+            <div>
+                <label for="descriPtion">Description</label>
+                <input id="description" name="description" type="text">
+            </div>
+
+            <div class="form-action-buttons">
+                <label for="submit">&nbsp;</label>
+                <button id='submit' onclick="onRegisterPressed()">Add new data</button>
+
+                <button onclick="onClearPressed()">crear</button>
+            </div>
+            </div>
+
+        </td>
+        <td>
+            <table id="employeeList">
+                <thead>
+                <tr>
+                    <th id="t">Work Place</th>
+                    <th id="t">Start work datee</th>
+                    <th id="t">Description</th>
+                    <th id="t">Action</th>
+                </tr>
+                </thead>
+                <tbody id="tableRows">
+
+                </tbody>
+            </table>
+        </td>
+    </tr>
+</table>
+<div id="back">
+ <a href="{{ url_for('home') }}">Back to main page</a>
+</div>
+</body>
+<script type=text/javascript src="{{url_for('static', filename='map1.js') }}"></script>
+
+{% endblock %}

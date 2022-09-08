@@ -1,0 +1,168 @@
+/* add background-image */
+body {
+background-image: url('/Static/logo.jpg');
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover;
+}
+/*  */
+
+
+/* add animation */
+#blink{
+  color white;
+  animation: mymove 2s infinite;
+   font-style: italic;
+}
+@keyframes mymove {
+  from {color: white;}
+  to {color: darkgrey;}
+}
+
+
+
+#ql2  {
+ margin:300px;
+ color:white;
+ font-size: 25px;
+ font-family:Courier New;
+}
+
+/* The navigation bar */
+.navbar {
+  overflow: hidden;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+}
+
+/* Links inside the navbar */
+.navbar a {
+
+  display: inline-block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change background on mouse-over */
+.navbar a:hover {
+  background: #ddd;
+  color: black;
+  border-radius: 3px;
+}
+
+#back a:hover {
+  background: #ddd;
+  color: black;
+  border-radius: 3px;
+}
+
+#back a {
+
+text-decoration:none;
+color: white
+
+}
+
+/*
+#blink {
+  animation: blink-animation 6s steps(6, start) infinite;
+  -webkit-animation: blink-animation 6s steps(6, start) infinite;
+}
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+
+blinking text comment */
+
+
+body > table{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table{
+    border-collapse: collapse;
+}
+table.list{
+    width:100%;
+}
+
+#t {
+    border: 1px solid white;
+    text-align: center;
+    padding: 8px;
+    color:white;
+    font-weight: bold;
+}
+
+tr,td {
+    border: 1px solid white;
+    text-align: left;
+    padding: 8px;
+    color:white;
+    font-weight: bold;
+    text-align:center
+}
+
+
+tr:nth-child(even),table.list thead>tr {
+    background-color: #dddddd;
+}
+
+input[type=text], input[type=number] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit]{
+    width: 30%;
+    background-color: #ddd;
+    color: #000;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form div.form-action-buttons{
+    text-align: right;
+}
+
+a{
+    cursor: pointer;
+    text-decoration: underline;
+    color: red;
+    margin-right: 4px;
+}
+
+label.validation-error{
+    color:   red;
+    margin-left: 5px;
+}
+
+.hide{
+    display:none;
+}
+
+#employeeList {
+    margin-left: auto;
+    margin-right: auto;
+
+}
