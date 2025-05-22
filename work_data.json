@@ -1,0 +1,12 @@
+[
+    {
+        "workplace": "Persistence Test 1",
+        "date": "2024-01-01",
+        "description": "First entry for persistence"
+    },
+    {
+        "workplace": "Persistence Test 2",
+        "date": "2024-01-02",
+        "description": "Second entry for persistence"
+    }
+]

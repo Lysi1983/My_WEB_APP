@@ -100,46 +100,107 @@ table.list{
 
 #t {
     border: 1px solid white;
-    text-align: center;
+    text-align: center; /* Headers remain centered */
     padding: 8px;
     color:white;
     font-weight: bold;
+}
+
+/* Style for table headers that are sortable */
+th[onclick]:hover {
+    background-color: #555; /* Darker shade on hover for clickable headers */
+}
+
+/* Styles for sort indicators (to be used with JS class manipulation) */
+.sort-asc::after {
+    content: " ▲";
+    font-size: 0.8em;
+}
+
+.sort-desc::after {
+    content: " ▼";
+    font-size: 0.8em;
 }
 
 tr,td {
     border: 1px solid white;
-    text-align: left;
-    padding: 8px;
+    padding: 8px; /* Keep padding */
     color:white;
     font-weight: bold;
-    text-align:center
+    text-align:left; /* Data cells left-aligned for readability */
 }
 
 
 tr:nth-child(even),table.list thead>tr {
-    background-color: #dddddd;
+    background-color: #dddddd; /* This will give even rows a light background, affecting text color if not careful */
+    /* Consider if white text on #dddddd is intended. If not, override color for these rows. */
 }
 
-input[type=text], input[type=number] {
+/* Ensure text in even rows is readable if background is light */
+tr:nth-child(even) td, tr:nth-child(even) th {
+    color: #333; /* Darker text for light backgrounds */
+}
+
+
+input[type=text], input[type=number], input[type=date] { /* Added input[type=date] */
     width: 100%;
-    padding: 12px 20px;
+    padding: 10px 15px; /* Adjusted padding for a slightly sleeker look */
     margin: 8px 0;
     display: inline-block;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
+    background-color: #fff; /* Ensure background is white for readability */
+    color: #333; /* Ensure text is dark for readability */
 }
 
-input[type=submit]{
-    width: 30%;
-    background-color: #ddd;
-    color: #000;
-    padding: 14px 20px;
-    margin: 8px 0;
+/* General button styling */
+button, input[type=submit] { /* Apply to input[type=submit] and button elements */
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    padding: 10px 15px; /* Adjusted padding */
+    margin: 8px 4px; /* Margin for spacing */
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    font-weight: bold;
 }
+
+button:hover, input[type=submit]:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+/* Specific styling for buttons within the form and search container if needed */
+#addform button, .search-container button {
+    /* width: auto; /* Allow buttons to size based on content, or set specific width */
+    /* For example, make form buttons take more width if desired */
+}
+
+#addform button#submit {
+    width: calc(70% - 8px); /* Example: submit button takes more space */
+}
+#addform button:not(#submit) { /* "crear" button */
+    width: calc(30% - 8px);
+}
+
+
+/* Search container specific styles */
+.search-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px; /* Increased margin a bit */
+}
+
+.search-container #searchInput {
+    flex-grow: 1; /* Input field takes available space */
+    margin-right: 8px; /* Space before the search button */
+}
+
+.search-container button {
+    width: auto; /* Let buttons size based on text */
+    padding: 10px 15px; /* Ensure consistent padding with other buttons */
+}
+
 
 form div.form-action-buttons{
     text-align: right;

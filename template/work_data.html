@@ -14,8 +14,16 @@
                 <input id="workplace" name="workplace" type="text">
             </div>
             <div>
+                <label for="jobTitle">Job Title</label>
+                <input id="jobTitle" name="jobTitle" type="text">
+            </div>
+            <div>
                 <label for="daTe">Start work date</label><br>
                 <input id="date" name="date" type="date">
+            </div>
+            <div>
+                <label for="endDate">End Date</label><br>
+                <input id="endDate" name="endDate" type="date">
             </div>
             <div>
                 <label for="descriPtion">Description</label>
@@ -32,11 +40,18 @@
 
         </td>
         <td>
+            <div class="search-container" style="margin-bottom: 10px;">
+                <input type="text" id="searchInput" placeholder="Search experiences..." style="/* width: 200px; padding: 5px; */">
+                <button id="searchButton" onclick="applyFilter()" style="/* padding: 5px; */">Search</button>
+                <button id="clearSearchButton" onclick="clearFilter()" style="/* padding: 5px; */">Clear</button>
+            </div>
             <table id="employeeList">
                 <thead>
                 <tr>
-                    <th id="t">Work Place</th>
-                    <th id="t">Start work datee</th>
+                    <th id="t" onclick="sortTable(0, 'string')" style="cursor:pointer;">Work Place</th>
+                    <th id="t" onclick="sortTable(1, 'string')" style="cursor:pointer;">Job Title</th>
+                    <th id="t" onclick="sortTable(2, 'date')" style="cursor:pointer;">Start work date</th>
+                    <th id="t" onclick="sortTable(3, 'date')" style="cursor:pointer;">End Date</th>
                     <th id="t">Description</th>
                     <th id="t">Action</th>
                 </tr>
