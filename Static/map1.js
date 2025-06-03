@@ -2,7 +2,8 @@ var formarry = [];
 var selectedIndex =-1;
 
     function init() {
-	document.getElementById("tableRows").value="";
+        // clear existing table rows when the page loads
+        document.getElementById("tableRows").innerHTML = "";
     if (localStorage.formmData) {
         formarry=JSON.parse(localStorage.formmData);
 		for (var i =0 ; i < formarry.length; i++) {
