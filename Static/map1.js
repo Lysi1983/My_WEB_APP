@@ -24,10 +24,11 @@ var selectedIndex =-1;
             date: daTe,
             description: descriPtion}
 		console.log(selectedIndex);
-		if (selectedIndex===-1) {
-		   formarry.push(formObj);
-		   prepareTableCell(workPlace,daTe,descriPtion);
-	    }else {
+                if (selectedIndex===-1) {
+                   formarry.push(formObj);
+                   var newIndex = formarry.length - 1;
+                   prepareTableCell(workPlace, daTe, descriPtion, newIndex);
+            }else {
 		    formarry.splice(selectedIndex, 1, formObj);
 
 		}
